@@ -35,11 +35,12 @@ public class JeuDeCartes {
 		StringBuilder sb = new StringBuilder("JEU");
 		for (Configuration configuration : typesDeCartes) {
 			String nbr = String.valueOf(configuration.getNbExemplaires());
+			String type = configuration.getCarte().toString();
+			sb.append(nbr + type + "\n");
 			
-			sb.append(configuration);
 		}
 		
-		return " ";
+		return sb.toString();
 	}
 
 	
@@ -64,3 +65,11 @@ public class JeuDeCartes {
 		}
 	}
 }
+
+
+
+
+
+
+
+
