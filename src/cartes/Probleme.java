@@ -1,16 +1,18 @@
 package cartes;
 
-public abstract class Probleme extends Cartes {
+public abstract class Probleme extends Carte {
 	
 	private Type type;
 	
 	public Probleme(Type type) {
-		super(type);
+		this.type = type;
 	}
 	
 	
 	public Type getType() {
 		return type;
 	}
+	
+	public abstract String toString();
 
 }

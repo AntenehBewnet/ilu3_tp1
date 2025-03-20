@@ -1,17 +1,23 @@
 package cartes;
 
 public enum Type {
-	FEU("feu rouge","feu vert","vehicule prioritaire");
-	//,ESSENCE,CREVAISON,ACCIDENT
-	//,
-
-    private final String attaque;
-    private final String parade;
-    private final String botte;
-
-    Type(String attaque, String parade, String botte) {
-        this.attaque = attaque;
-        this.parade = parade;
-        this.botte = botte;
-    }
+	FEU("Feu Rouge","Feu Vert","Vehicule Prioritaire"), ESSENCE("Panne D'Essence","Bidon d'Essence","Citerne D'Essence"), 
+	CREVAISON("Crevaison","Roue De Secours","Increvable"), ACCIDENT("Accident","Reparations","As Du Volant");
+	private final String nomAttaque;
+	private final String nomParade;
+	private final String nomBotte;
+	private Type(String nomAttaque, String nomParade, String nomBotte) {
+		this.nomAttaque = nomAttaque;
+		this.nomParade = nomParade;
+		this.nomBotte = nomBotte;
+	}
+	public String getNomAttaque() {
+		return nomAttaque;
+	}
+	public String getNomParade() {
+		return nomParade;
+	}
+	public String getNomBotte() {
+		return nomBotte;
+	}
 }
